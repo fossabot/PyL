@@ -18,7 +18,7 @@ matrix:
     - python: nightly
       env: TOXENV=py
     - os: osx
-      language: generic
+      language: python
       env: TOXENV=py
   allow_failures:
     - python: nightly
