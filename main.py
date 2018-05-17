@@ -10,7 +10,7 @@ if platform.system() == 'Darwin': # MacOS only
         exit()
     else:
         print ('Please choose a valid option')
-        exec(open("demo.py").read())
+        exec(open("main.py").read())
 else:
     print('Your OS is incompatible with this software')
     exit
