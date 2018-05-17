@@ -24,7 +24,7 @@ matrix:
     - python: nightly
       env: TOXENV=py
     - os: osx
-      language: generic
+      language: python
       env: TOXENV=py
   fast_finish: true
 before_install:
