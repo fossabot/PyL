@@ -4,14 +4,7 @@ if platform.system() == 'Darwin': # MacOS only
     command = command.lower() 
     cmd1 = command.split(' ', 1)[0] 
     if cmd1 == 'open': # Tests if open is the first word in the command
-        import os
-        app = command.split(' ', 1)[1]
-        cmd2 = '{} {} {}'.format('open', '-a', app)
-        if os.system(cmd2) == 0: # Tests to see if the application could be opened
-            pass
-        else:
-            print('Could not open program')
-        exec(open("demo.py").read())
+        exec(open("open.py").read())
     elif command.lower() == 'exit':
         print('Thanks for visiting!')
         exit()
