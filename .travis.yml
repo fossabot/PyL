@@ -1,7 +1,9 @@
 language: python
 sudo: false
 install:
-  - pip install python-coveralls
+  - pip install coveralls
+  - coverage run --source=mypkg setup.py test
+  - coveralls
 script: python main.py < testing.txt
 matrix:
   include:
@@ -30,5 +32,3 @@ branches:
     - master
 notifications:
   email: false
-after_success:
-  - coveralls
