@@ -1,0 +1,5 @@
+language: python
+sudo: false
+script: python main.py < testing.txt
+notifications:
+  email: false
