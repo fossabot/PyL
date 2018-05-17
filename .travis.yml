@@ -3,6 +3,8 @@ sudo: false
 script: python main.py < testing.txt
 matrix:
   include:
+    - python: 2.7
+      env: TOXENV=py
     - python: 3.6
       env: TOXENV=py
     - python: 3.5
@@ -14,6 +16,12 @@ matrix:
   allow_failures:
     - python: nightly
       env: TOXENV=py
+    - os: osx
+      language: generic
+      env: TOXENV=py
   fast_finish: true
+branches:
+  only:
+    - master
 notifications:
   email: false
