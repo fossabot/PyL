@@ -1,5 +1,7 @@
 language: python
 sudo: false
+install:
+  - pip install python-coveralls
 script: python main.py < testing.txt
 matrix:
   include:
@@ -28,3 +30,5 @@ branches:
     - master
 notifications:
   email: false
+after_success:
+  - coveralls
