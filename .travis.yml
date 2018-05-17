@@ -1,5 +1,19 @@
 language: python
 sudo: false
 script: python main.py < testing.txt
+matrix:
+  include:
+    - python: 3.6
+      env: TOXENV=py
+    - python: 3.5
+      env: TOXENV=py
+    - python: 3.4
+      env: TOXENV=py
+    - python: nightly
+      env: TOXENV=py
+  allow_failures:
+    - python: nightly
+      env: TOXENV=py
+  fast_finish: true
 notifications:
   email: false
