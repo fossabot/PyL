@@ -1,8 +1,9 @@
 import os
-app = command.split(' ', 1)[1]
-cmd2 = '{} {} {}'.format('open', '-a', app)
+web = command.split(' ', 1)[1]
+web = web.lower()
+cmd2 = 'open http://{}'.format(web)
 if os.system(cmd2) == 0: # Tests to see if the application could be opened
-    print(app.title(), 'opened')
+    print(web.title(), 'opened')
 else:
-    print('Could not open program')
+    print('Could not open website')
 exec(open("main.py").read())
